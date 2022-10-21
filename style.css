@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: url(bg.png);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+header{
+    width:100%;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
+}
+#chk1{
+    display: none;
+}
+i{
+    color: #fff;
+    cursor: pointer;
+}
+header .logo{
+    flex: content;
+    letter-spacing: 0.5em;
+    height: auto;
+    font-weight: bolder;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 9px;
+}
+header ul {
+    flex:content;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+
+.text-box{
+    width: 90%;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 0.5em;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.event{
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(21, 0, 255);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    letter-spacing: 0.1em;
+    position: relative;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.event:hover{
+    border: 1px solid #1519ee9e;
+    background: #0c10ea9e;
+    transition: 1s;
+    color: #fff;
+}
+
+
+@media(max-width:1000px){
+    header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: calc(100vh - 100px);
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.8s linear;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+  
+}
